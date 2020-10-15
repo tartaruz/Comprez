@@ -16,7 +16,6 @@ Get to the localization of your git repository and use python to run the code
 python3 comprez.py
 ```
 A GUI window will popup and ask you for a number between 1-99. This will be the ratio of compression :)
-
 <br>
 <img src="/files/readme_img/gui.png" width="400">
 <br>
