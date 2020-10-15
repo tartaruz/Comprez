@@ -15,6 +15,11 @@ Get to the localization of your git repository and use python to run the code
 ```python
 python3 comprez.py
 ```
+A GUI window will popup and ask you for a number between 1-99. This will be the ratio of compression :)
+
+<br>
+<img src="/files/readme_img/gui.jpg" width="400">
+<br>
 
 ## Example
 Here an imagen of gelly stuff are compressed with the ratio of 1. 
@@ -26,5 +31,3 @@ __Before__ compression:
 __After__:
 <br>
 <img src="/files/readme_img/gele.jpg" width="400">
-
-A GUI window will popup and ask you for a number between 1-99. This will be the ratio of compression :)
