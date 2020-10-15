@@ -20,6 +20,12 @@ A GUI window will popup and ask you for a number between 1-99. This will be the 
 <br>
 <img src="/files/readme_img/gui.png" width="400">
 <br>
+Enter a valid number and then execute!
+
+The terminal informes the progress:
+<br>
+<img src="/files/readme_img/terminal.png" width="400">
+<br>
 
 ## Example
 Here an imagen of gelly stuff are compressed with the ratio of 1. 
