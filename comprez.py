@@ -73,7 +73,6 @@ def fetch(entries):
 
 def makeform(root, fields):
     entries = []
-
     row = tk.Frame(root)
     lab = tk.Label(row, width=15, text=fields, anchor='w')
     ent = tk.Entry(row)
