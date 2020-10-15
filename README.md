@@ -20,5 +20,6 @@ Example:
 Compression with a compression rate of 1:
 ![Alt text](/files/readme_img/geleOG.jpg?raw=true)
 ![Alt text](/files/readme_img/gele.jpg?raw=true)
+<img src="/files/readme_img/geleOG.jpg" width="48">
 
 A GUI window will popup and ask you for a number between 1-99. This will be the ratio of compression :)
