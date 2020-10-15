@@ -18,7 +18,7 @@ python3 comprez.py
 A GUI window will popup and ask you for a number between 1-99. This will be the ratio of compression :)
 
 <br>
-<img src="/files/readme_img/gui.jpg" width="400">
+<img src="/files/readme_img/gui.png" width="400">
 <br>
 
 ## Example
