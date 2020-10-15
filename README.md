@@ -18,7 +18,7 @@ python3 comprez.py
 
 Example:
 Compression with a compression rate of 1:
-![Alt text](/files/readme_img/geleOG.jpg?raw=true =250x250)
-![Alt text](/files/readme_img/gele.jpg?raw=true =250x250)
+![Alt text](/files/readme_img/geleOG.jpg?raw=true | width=30)
+![Alt text](/files/readme_img/gele.jpg?raw=true | width=30)
 
 A GUI window will popup and ask you for a number between 1-99. This will be the ratio of compression :)
