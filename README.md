@@ -3,6 +3,7 @@
 All imagenes in the folder originals will get compressed to the folder named compressed
 
 ## Installation
+> You need to have Python3.+
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
 
