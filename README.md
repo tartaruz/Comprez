@@ -1,6 +1,6 @@
 # Comprez
 
-All imagenes in the folder originals will get compressed to the folder names compressed
+All imagenes in the folder originals will get compressed to the folder named compressed
 
 ## Installation
 
@@ -15,3 +15,5 @@ Get to the localization of your git repository and use python to run the code
 ```python
 python3 comprez.py
 ```
+
+A GUI window will popup and ask you for a number between 1-99. This will be the ratio of compression :)
