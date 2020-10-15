@@ -19,10 +19,12 @@ python3 comprez.py
 ## Example
 Here an imagen of gelly stuff are compressed with the ratio of 1. 
 
-Before compression:
+__Before__ compression:
+<br>
 <img src="/files/readme_img/geleOG.jpg" width="400">
 <br>
-After:
+__After__:
+<br>
 <img src="/files/readme_img/gele.jpg" width="400">
 
 A GUI window will popup and ask you for a number between 1-99. This will be the ratio of compression :)
