@@ -1,0 +1,23 @@
+
+File: hairyThing.jpg
+Size: 1899523	 NewSize: 89968	 
+Ratio:95.2%
+
+File: geleThing.jpg
+Size: 349512	 NewSize: 22421	 
+Ratio:93.5%
+
+File: longThing.jpg
+Size: 2955390	 NewSize: 80827	 
+Ratio:97.2%
+
+File:  okeyMan.png
+Size:  195868	 NewSize:  194019	 
+Ratio:0.94%
+
+File: greenThing.jpg
+Size: 1699620	 NewSize: 80399	 
+Ratio:95.2%
+
+
+-------Errors--------
