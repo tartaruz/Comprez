@@ -8,7 +8,7 @@ import time
 path = os.path.realpath("./")
 inputPath = os.path.realpath("./")+"/originals/"
 outputPath = os.path.realpath("./")+"/compressed/"
-logPath = os.path.realpath("./")+"/log/"
+logPath = os.path.realpath("./")+"/files/log/"
 imgList = os.listdir( inputPath )
 
 # Date
@@ -20,34 +20,33 @@ now = time.localtime()
 def resize(q):
     current_time = time.strftime("%H:%M:%S", now)
     log = open(logPath+today+"_log["+current_time+"].txt", "w")
-    prosenten = 0
-    nr = 0
+    errors, nr = [], 0
     for item in imgList:
-        if os.path.isfile(inputPath+item):
-            im = Image.open(inputPath+item)
-            nr +=1
-            imResize = im.resize(im.size, Image.ANTIALIAS)
-           
+        if os.path.isfile(inputPath+item):   
             if item.split(".")[-1]=="jpg":
+                im = Image.open(inputPath+item)
+                nr +=1
+                imResize = im.resize(im.size, Image.ANTIALIAS)
                 imResize.save(outputPath +item, 'JPEG', optimize=True, quality=q)
                 oldSize, newSize = os.path.getsize (inputPath+item), os.path.getsize (outputPath+item)
-                data = "\nFile: "+item+"\nSize: "+str(oldSize)+"\t NewSize: "+str(newSize)+"\t Ratio:"+str(float((newSize/oldSize)*100))[:4]+"\n"
+                data = "\nFile: "+item+"\nSize: "+str(oldSize)+"\t NewSize: "+str(newSize)+"\t \nRatio:"+str(float((1-(newSize/oldSize))*100))[:4]+"%\n"
                 log.write(data)
-
             elif(item.split(".")[-1]=="png"):
+                im = Image.open(inputPath+item)
+                nr +=1
+                imResize = im.resize(im.size, Image.ANTIALIAS)
                 imResize.save(outputPath +item, 'PNG', optimize=True, quality=q)
                 oldSize, newSize = os.path.getsize (inputPath+item), os.path.getsize (outputPath+item)
-                data = "\nFile: "+item+"\nSize: "+str(oldSize)+"\t NewSize: "+str(newSize)+"\t Ratio:"+str(float((newSize/oldSize)*100))[:4]+"\n"
+                data = "\nFile:  "+item+"\nSize:  "+str(oldSize)+"\t NewSize:  "+str(newSize)+"\t \nRatio:"+str(float((1-(newSize/oldSize))*100))[:4]+"%\n"
                 log.write(data)
-
             else:
-                print("IMG ["+ item+"] was skipped [NOT JPEG OR PNG]")
-                print(item+' Error [Not compressed]')
-            prosenten = (str( (nr/len(imgList) * 100))+"%")
-            
-            print(prosenten)
-    print("DONE")
-
+                errors.append(item)
+            prosenten = (str( (nr/(len(imgList)-len(errors)) * 100))+"%")
+            print(prosenten+" \t Errors: "+str(len(errors))+" \t Success: "+str(nr))
+    log.write("\n\n-------Errors--------\n")
+    for error in errors:
+        log.write(error+"\n")
+    print("Log can be found at path: "+logPath)
 
 
 def verifyInput(query):
@@ -88,6 +87,7 @@ if __name__ == '__main__':
     fields = 'Reduction number'
     root = tk.Tk()
     root.title("Imagen Compression") 
+    root.iconphoto(True, tk.PhotoImage(file="./files/icon/acc.png"))
     l = tk.Label(root, text = "Compression of "+str(len(imgList))+" img") 
     l.config(font =("Courier", 14)) 
     l.pack()
